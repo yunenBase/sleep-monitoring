@@ -1,5 +1,6 @@
 from config.config import db
 from datetime import datetime
+import uuid
 
 def save_to_firestore_detection(timestamp, image_url, sleep_count, obj_id, total_duration, coords_rel=None, camera_id=None):
     try:
@@ -24,16 +25,18 @@ def save_to_firestore_detection(timestamp, image_url, sleep_count, obj_id, total
 def save_to_firestore_duration(start_timestamp, end_timestamp, obj_id, camera_id=None):
     try:
         date_str = datetime.now().strftime("%Y-%m-%d")
+        # Gunakan kombinasi camera_id dan start_timestamp sebagai ID dokumen
+        unique_id = f"{camera_id}_{int(start_timestamp)}"
         doc_ref = db.collection('duration').document(date_str)
         data = {
-            str(obj_id): {
+            unique_id: {
                 'start_timestamp': int(start_timestamp),
                 'end_timestamp': int(end_timestamp),
                 'duration': end_timestamp - start_timestamp,
-                'camera_id': camera_id  # Tambahkan camera_id
+                'camera_id': camera_id
             }
         }
         doc_ref.set(data, merge=True)
-        print(f"Data durasi disimpan ke Firestore (duration): {date_str}/ID {obj_id}, Start: {int(start_timestamp)}, End: {int(end_timestamp)}, Duration: {(end_timestamp - start_timestamp):.2f} detik, Camera ID: {camera_id}")
+        print(f"Data durasi disimpan ke Firestore (duration): {date_str}/{unique_id}, Start: {int(start_timestamp)}, End: {int(end_timestamp)}, Duration: {(end_timestamp - start_timestamp):.2f} detik, Camera ID: {camera_id}")
     except Exception as e:
         print(f"Error saat menyimpan ke Firestore (duration): {e}")

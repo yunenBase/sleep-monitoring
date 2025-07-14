@@ -13,14 +13,14 @@ from notifications.telegram import send_to_telegram
 # Inisialisasi model YOLO
 model = YoloTRT(
     library="yolov5/build/libmyplugins.so",
-    engine="yolov5/build/best.engine",
+    engine="models/newhyp.engine",
     conf=0.5,
     yolo_ver="v5"
 )
 
 # Inisialisasi video capture
-cap = cv2.VideoCapture(1, cv2.CAP_V4L2)
-# cap = cv2.VideoCapture('videos/camlamakiri.mp4')
+# cap = cv2.VideoCapture(1, cv2.CAP_V4L2)
+cap = cv2.VideoCapture('videos/camkanan.mp4')
 if not cap.isOpened():
     print("Error: Tidak dapat membuka video tes-vid.mp4")
     sys.exit()
@@ -63,21 +63,26 @@ while True:
     print(f"Deteksi 'sleep': {len(detections)} objek")
 
     detections = adjust_bboxes(detections, padding)
-    tracked_boxes, next_id = update_tracks(tracked_boxes, detections)
+    tracked_boxes, next_id = update_tracks(tracked_boxes, detections, camera_id)
     current_time = time.time()
 
     # Inisialisasi objek baru dengan total_duration
-    for obj_id, obj_data in tracked_boxes.items():
+    for obj_id, obj_data in list(tracked_boxes.items()):  # Use list() to create a copy
         if obj_id not in tracked_objects:
-            tracked_objects[obj_id] = {
+            # Gunakan kombinasi camera_id dan current_time sebagai unique_id
+            unique_obj_id = f"{camera_id}_{int(current_time)}"  # Adjust if needed to match update_tracks format
+            tracked_objects[unique_obj_id] = {
                 'start_time': current_time,
                 'message_sent': False,
                 'total_duration': 0.0
             }
-            print(f"Deteksi baru untuk ID {obj_id}")
+            print(f"Deteksi baru untuk ID {unique_obj_id}")
+            # Replace the old obj_id with unique_obj_id in tracked_boxes
+            tracked_boxes[unique_obj_id] = tracked_boxes.pop(obj_id)
 
     frame_for_upload = remove_padding(frame_for_inference, padding)
 
+    # Update durasi dan cek notifikasi
     # Update durasi dan cek notifikasi
     for obj_id in list(tracked_objects.keys()):
         if obj_id in tracked_boxes:
@@ -85,10 +90,13 @@ while True:
             tracked_objects[obj_id]['total_duration'] = duration
             print(f"ID {obj_id}: Durasi deteksi = {duration:.2f} detik, Total Duration = {tracked_objects[obj_id]['total_duration']:.2f} detik, Message Sent = {tracked_objects[obj_id]['message_sent']}")
             if not tracked_objects[obj_id]['message_sent'] and duration >= DETECTION_DURATION:
+                # Hitung sleep_count hanya untuk objek dengan durasi >= DETECTION_DURATION
+                valid_objects = [oid for oid in tracked_objects.keys() if tracked_objects[oid]['total_duration'] >= DETECTION_DURATION]
+                sleep_count = len(valid_objects)
+                
                 image_url = upload_to_cloudinary(frame_for_upload)
                 if image_url:
                     timestamp = time.time()
-                    sleep_count = len(detections)
                     box = tracked_boxes[obj_id]['box']
                     x1, y1, x2, y2 = [int(coord) for coord in box]
                     x1_rel = x1 / frame_width
