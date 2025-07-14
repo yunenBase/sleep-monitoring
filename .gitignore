@@ -1,0 +1,16 @@
+__pycache__/
+capture/
+*.mp4
+*.jpg
+*.png
+sleep_monitoring/config/
+sleepmonitoring-ed560-firebase-adminsdk-fbsvc-6a7f045e37.json
+control.py
+final-cam1.py
+final-juga.py
+final.py
+new.py
+new2.py
+send_to_channel.py
+*.pt
+*.wts
