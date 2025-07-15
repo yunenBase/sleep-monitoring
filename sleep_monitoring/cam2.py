@@ -21,7 +21,7 @@ model = YoloTRT(
 
 # Inisialisasi video capture
 # cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
-cap = cv2.VideoCapture('videos/camlamakiri.mp4')
+cap = cv2.VideoCapture('videos/camkanan.mp4')
 if not cap.isOpened():
     print("Error: Tidak dapat membuka video tes-vid.mp4")
     sys.exit()
@@ -41,7 +41,7 @@ capture_count = 0  # Variabel untuk penamaan file gambar
 tracked_objects = {}  # {id: {'start_time': float, 'total_duration': float, 'last_notification_time': float, 'notified_first': bool, 'notified_second': bool}}
 tracked_boxes = {}    # {id: {'centroid': tuple, 'box': list, 'class': str, 'conf': float}}
 next_id = 0
-camera_id = 1  # Identitas kamera
+camera_id = 2  # Identitas kamera
 
 # Main loop
 while True:
@@ -208,7 +208,7 @@ while True:
         else:
             start_timestamp = tracked_objects[obj_id]['start_time']
             end_timestamp = current_time
-            if tracked_objects[obj_id]['total_duration'] > 0:
+            if tracked_objects[obj_id]['total_duration'] >= DETECTION_DURATION:  # Hanya simpan jika melebihi DETECTION_DURATION
                 save_to_firestore_duration(start_timestamp, end_timestamp, obj_id, camera_id=camera_id)
             print(f"Deteksi terhenti untuk ID {obj_id}, Total Duration: {tracked_objects[obj_id]['total_duration']:.2f} detik")
             del tracked_objects[obj_id]
@@ -239,7 +239,7 @@ while True:
         for obj_id in tracked_objects:
             start_timestamp = tracked_objects[obj_id]['start_time']
             end_timestamp = time.time()
-            if tracked_objects[obj_id]['total_duration'] > 0:
+            if tracked_objects[obj_id]['total_duration'] >= DETECTION_DURATION:  # Hanya simpan jika melebihi DETECTION_DURATION
                 save_to_firestore_duration(start_timestamp, end_timestamp, obj_id, camera_id=camera_id)
                 print(f"Program berhenti, ID {obj_id} Total Duration: {tracked_objects[obj_id]['total_duration']:.2f} detik")
         break
