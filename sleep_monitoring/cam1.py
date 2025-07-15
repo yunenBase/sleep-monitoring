@@ -20,7 +20,7 @@ model = YoloTRT(
 
 # Inisialisasi video capture
 # cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
-cap = cv2.VideoCapture('videos/camlamakanan.mp4')
+cap = cv2.VideoCapture('videos/camlamakiri.mp4')
 if not cap.isOpened():
     print("Error: Tidak dapat membuka video tes-vid.mp4")
     sys.exit()
@@ -32,7 +32,7 @@ frame_count = 0
 tracked_objects = {}  # {id: {'start_time': float, 'message_sent': bool, 'total_duration': float}}
 tracked_boxes = {}    # {id: {'centroid': tuple, 'box': list, 'class': str, 'conf': float}}
 next_id = 0
-camera_id = 1  # Identitas kamera
+camera_id = 0  # Identitas kamera
 
 # Main loop
 while True:

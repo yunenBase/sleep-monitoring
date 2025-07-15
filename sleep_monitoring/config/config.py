@@ -20,4 +20,4 @@ TELEGRAM_URL = f"https://api.telegram.org/bot{TOKEN}/sendPhoto"
 
 # Konfigurasi deteksi
 DETECTION_DURATION = 10
-DETECTION_DURATION_CONTINUE = 30.0
+DETECTION_DURATION_CONTINUE = 20
