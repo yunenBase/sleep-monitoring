@@ -26,7 +26,7 @@ model = YoloTRT(
 
 # Inisialisasi video capture
 # cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
-cap = cv2.VideoCapture('videos/kanan_v1.4.mp4')
+cap = cv2.VideoCapture('videos/camlamakanan.mp4')
 if not cap.isOpened():
     print("Error: Tidak dapat membuka video tes-vid.mp4")
     sys.exit()
@@ -153,10 +153,9 @@ while True:
                     }
                     save_to_firestore_detection(timestamp, image_url, sleep_count, obj_id, tracked_objects[obj_id]['total_duration'], coords_rel, camera_id=camera_id)
                     # Konversi timestamp ke WIB
-                    detection_start_time_wib = datetime.fromtimestamp(tracked_objects[obj_id]['start_time'], tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
                     detection_time_wib = datetime.fromtimestamp(tracked_objects[obj_id]['detection_time'], tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
                     send_time_wib = datetime.fromtimestamp(timestamp, tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
-                    caption = f"Ada yang ketiduran nih | Deteksi Awal: {detection_start_time_wib}, Deteksi: {detection_time_wib}, Pengiriman: {send_time_wib}, Duration: {tracked_objects[obj_id]['total_duration']:.2f} seconds"
+                    caption = f"Ada yang ketiduran nih | Deteksi: {detection_time_wib}, Pengiriman: {send_time_wib}, Duration: {tracked_objects[obj_id]['total_duration']:.2f} seconds"
                     send_to_telegram(image_url, caption, tracked_objects[obj_id]['total_duration'])
                     tracked_objects[obj_id]['notified_first'] = True
                     tracked_objects[obj_id]['last_notification_time'] = timestamp
@@ -213,10 +212,9 @@ while True:
                     }
                     save_to_firestore_detection(timestamp, image_url, sleep_count, obj_id, tracked_objects[obj_id]['total_duration'], coords_rel, camera_id=camera_id)
                     # Konversi timestamp ke WIB
-                    detection_start_time_wib = datetime.fromtimestamp(tracked_objects[obj_id]['start_time'], tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
                     detection_time_wib = datetime.fromtimestamp(tracked_objects[obj_id]['detection_time'], tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
                     send_time_wib = datetime.fromtimestamp(timestamp, tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
-                    caption = f"Terpantau masih tidur ya | Deteksi Awal: {detection_start_time_wib}, Deteksi: {detection_time_wib}, Pengiriman: {send_time_wib}, Duration: {tracked_objects[obj_id]['total_duration']:.2f} seconds"
+                    caption = f"Terpantau masih tidur ya | Deteksi: {detection_time_wib}, Pengiriman: {send_time_wib}, Duration: {tracked_objects[obj_id]['total_duration']:.2f} seconds"
                     send_to_telegram(image_url, caption, tracked_objects[obj_id]['total_duration'])
                     tracked_objects[obj_id]['notified_second'] = True
                     tracked_objects[obj_id]['last_notification_time'] = timestamp

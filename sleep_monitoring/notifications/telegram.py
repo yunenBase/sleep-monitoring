@@ -1,13 +1,15 @@
 import requests
-from config.config import TELEGRAM_URL, CHANNEL_ID
+from config.config import TELEGRAM_URL, CHANNEL_ID, DETECTION_DURATION
 
 def send_to_telegram(image_url, caption, total_duration):
     print(f"Mencoba mengirim notifikasi ke Telegram dengan URL: {image_url}")
     try:
+        # Hitung delay dengan mengurangi DETECTION_DURATION dari total_duration
+        delay = total_duration - DETECTION_DURATION
         data = {
             'chat_id': CHANNEL_ID,
             'photo': image_url,
-            'caption': f"{caption}, Duration: {total_duration:.2f} seconds"
+            'caption': f"{caption}, Delay: {delay:.2f} seconds"
         }
         response = requests.post(TELEGRAM_URL, data=data)
         if response.status_code == 200:
