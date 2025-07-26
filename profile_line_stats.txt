@@ -1,0 +1,261 @@
+Timer unit: 1e-06 s
+
+Total time: 108.934 s
+File: sleep_monitoring/profiling.py
+Function: main at line 20
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==========================  ====================================
+    20                                           @profile
+    21                                           def main():
+    22                                               # Inisialisasi model YOLO
+    23         1          6.8      6.8      0.0      model = YoloTRT(
+    24         1          1.1      1.1      0.0          library="yolov5/build/libmyplugins.so",
+    25         1          0.9      0.9      0.0          engine="models/newhyp.engine",
+    26         1          0.8      0.8      0.0          conf=0.5,
+    27         1    8257941.8    8e+06      7.6          yolo_ver="v5"
+    28                                               )
+    29                                           
+    30                                               # Inisialisasi video capture
+    31         1     100909.1 100909.1      0.1      cap = cv2.VideoCapture('videos/camlamakiri.mp4')
+    32         1         54.2     54.2      0.0      if not cap.isOpened():
+    33                                                   print("Error: Tidak dapat membuka video tes-vid.mp4")
+    34                                                   sys.exit()
+    35                                           
+    36         1      17927.7  17927.7      0.0      cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+    37         1         11.0     11.0      0.0      cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+    38                                           
+    39                                               # --- Blok Kode Baru: Membuat folder untuk menyimpan gambar ---
+    40         1          6.0      6.0      0.0      capture_dir = 'capture'
+    41         1         71.7     71.7      0.0      if not os.path.exists(capture_dir):
+    42                                                   os.makedirs(capture_dir)
+    43                                                   print(f"Direktori '{capture_dir}' berhasil dibuat.")
+    44                                               # -----------------------------------------------------------
+    45                                           
+    46         1          1.2      1.2      0.0      frame_count = 0
+    47         1          1.2      1.2      0.0      capture_count = 0  # Variabel untuk penamaan file gambar
+    48         1          2.7      2.7      0.0      tracked_objects = {}  # {id: {'start_time': float, 'total_duration': float, 'last_notification_time': float, 'notified_first': bool, 'notified_second': bool, 'detection_time': float}}
+    49         1          1.6      1.6      0.0      tracked_boxes = {}    # {id: {'centroid': tuple, 'box': list, 'class': str, 'conf': float}}
+    50         1          1.0      1.0      0.0      next_id = 0
+    51         1          0.8      0.8      0.0      camera_id = 1  # Identitas kamera
+    52                                           
+    53                                               # Main loop
+    54         1          1.0      1.0      0.0      while True:
+    55       576   15851526.4  27520.0     14.6          ret, frame = cap.read()  # 'frame' adalah gambar asli
+    56       576       1700.8      3.0      0.0          if not ret:
+    57                                                       print("Gagal mengambil frame dari video")
+    58                                                       break
+    59                                           
+    60       576      11365.3     19.7      0.0          frame_count += 1
+    61       576    7179618.3  12464.6      6.6          frame_resized = cv2.resize(frame, (640, 360))  # Frame resized untuk inferensi
+    62       576       7229.9     12.6      0.0          frame_height, frame_width = frame_resized.shape[:2]
+    63       576     273062.9    474.1      0.3          frame_for_inference, padding = add_padding(frame_resized, target_size=(640, 640))
+    64                                                   
+    65       576   58698043.6 101906.3     53.9          detections, t = model.Inference(frame_for_inference)
+    66       575     299455.2    520.8      0.3          print(f"Frame {frame_count}: {len(detections)} objek terdeteksi")
+    67      1128      24302.2     21.5      0.0          for idx, obj in enumerate(detections):
+    68       553     914256.9   1653.3      0.8              print(f"  Deteksi {idx} (sebelum filter): Kelas={obj['class']}, Conf={obj['conf']}, Box={obj['box']}")
+    69                                           
+    70                                                   # Filter hanya objek "sleep"
+    71       575      10562.0     18.4      0.0          detections = [obj for obj in detections if obj['class'] == "sleep"]
+    72       575      77301.8    134.4      0.1          print(f"Deteksi 'sleep': {len(detections)} objek")
+    73                                           
+    74                                                   # Debugging koordinat sebelum dan sesudah adjust_bboxes
+    75      1128      46803.0     41.5      0.0          for idx, obj in enumerate(detections):
+    76       553     949544.2   1717.1      0.9              print(f"  Deteksi {idx} (sebelum adjust_bboxes): Kelas={obj['class']}, Conf={obj['conf']}, Box={obj['box']}")
+    77       575     137313.1    238.8      0.1          detections = adjust_bboxes(detections, padding)
+    78      1128      16992.7     15.1      0.0          for idx, obj in enumerate(detections):
+    79       553     109753.6    198.5      0.1              print(f"  Deteksi {idx} (sesudah adjust_bboxes): Kelas={obj['class']}, Conf={obj['conf']}, Box={obj['box']}")
+    80                                           
+    81       575     259075.5    450.6      0.2          tracked_boxes, next_id = update_tracks(tracked_boxes, detections, camera_id)
+    82       575       1998.2      3.5      0.0          current_time = time.time()
+    83                                           
+    84                                                   # Inisialisasi objek baru dengan total_duration dan status notifikasi
+    85      1128       8415.5      7.5      0.0          for obj_id, obj_data in list(tracked_boxes.items()):  # Use list() to create a copy
+    86       553       1241.4      2.2      0.0              if obj_id not in tracked_objects:
+    87        16         97.2      6.1      0.0                  unique_obj_id = f"{camera_id}_{int(current_time)}"
+    88                                                           tracked_objects[unique_obj_id] = {
+    89        16         17.4      1.1      0.0                      'start_time': current_time,
+    90        16         16.9      1.1      0.0                      'total_duration': 0.0,
+    91        16         14.8      0.9      0.0                      'last_notification_time': 0.0,
+    92        16         13.2      0.8      0.0                      'notified_first': False,  # Flag untuk notifikasi pertama
+    93        16         14.6      0.9      0.0                      'notified_second': False,  # Flag untuk notifikasi kedua
+    94        16         91.8      5.7      0.0                      'detection_time': 0.0      # Inisialisasi dengan 0, akan diperbarui saat notifikasi pertama
+    95                                                           }
+    96        16      33643.3   2102.7      0.0                  print(f"Deteksi baru untuk ID {unique_obj_id}")
+    97        16        328.9     20.6      0.0                  tracked_boxes[unique_obj_id] = tracked_boxes.pop(obj_id)
+    98                                           
+    99                                                   # Buat frame untuk upload tanpa bounding box awal
+   100       575     216190.2    376.0      0.2          frame_for_upload = frame_resized.copy()
+   101                                           
+   102                                                   # Update durasi dan cek notifikasi
+   103      1131      35462.6     31.4      0.0          for obj_id in list(tracked_objects.keys()):
+   104       556       1273.0      2.3      0.0              if obj_id in tracked_boxes:
+   105       548       2401.5      4.4      0.0                  duration = current_time - tracked_objects[obj_id]['start_time']
+   106       548       1500.7      2.7      0.0                  tracked_objects[obj_id]['total_duration'] = duration
+   107       548     164793.0    300.7      0.2                  print(f"ID {obj_id}: Durasi deteksi = {duration:.2f} detik, Total Duration = {tracked_objects[obj_id]['total_duration']:.2f} detik, Notified First = {tracked_objects[obj_id]['notified_first']}, Notified Second = {tracked_objects[obj_id]['notified_second']}")
+   108                                                           
+   109                                                           # Notifikasi pertama saat melebihi DETECTION_DURATION
+   110       548       5222.7      9.5      0.0                  if tracked_objects[obj_id]['total_duration'] >= DETECTION_DURATION and not tracked_objects[obj_id]['notified_first']:
+   111         2          6.1      3.0      0.0                      if tracked_objects[obj_id]['detection_time'] == 0.0:  # Set detection_time saat notifikasi pertama
+   112         2          5.2      2.6      0.0                          tracked_objects[obj_id]['detection_time'] = current_time
+   113         2         37.0     18.5      0.0                      valid_objects = [oid for oid in tracked_objects.keys() if tracked_objects[oid]['total_duration'] >= DETECTION_DURATION]
+   114         2          5.9      3.0      0.0                      sleep_count = len(valid_objects)
+   115                                                               
+   116                                                               # Tambahkan bounding box hijau untuk notifikasi pertama
+   117         2        578.3    289.2      0.0                      temp_frame = frame_for_upload.copy()
+   118         2         55.2     27.6      0.0                      x1, y1, x2, y2 = [int(coord) for coord in tracked_boxes[obj_id]['box']]
+   119         2        147.7     73.8      0.0                      cv2.rectangle(temp_frame, (x1, y1), (x2, y2), (0, 255, 0), 2)  # Hijau
+   120         2          4.6      2.3      0.0                      label = obj_id
+   121         2         41.5     20.8      0.0                      label_size, _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.6, 2)
+   122         2          2.6      1.3      0.0                      label_x = x1
+   123         2          7.4      3.7      0.0                      label_y = y1 - 10 if y1 - 10 > 10 else y1 + label_size[1] + 10
+   124         2         60.6     30.3      0.0                      cv2.rectangle(temp_frame, (label_x, label_y - label_size[1] - 4), (label_x + label_size[0] + 4, label_y + 4), (0, 255, 0), cv2.FILLED)
+   125         2        334.7    167.3      0.0                      cv2.putText(temp_frame, label, (label_x + 2, label_y - 2), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 2)
+   126                                           
+   127                                                               # Proses dan unggah notifikasi pertama
+   128         2        157.7     78.8      0.0                      temp_image_path = os.path.join(capture_dir, f'temp_{obj_id}_{time.strftime("%H-%M-%S")}.jpg')
+   129         2      64517.5  32258.7      0.1                      cv2.imwrite(temp_image_path, temp_frame)
+   130         2      10984.6   5492.3      0.0                      print(f"Gambar sementara disimpan di: {temp_image_path}")
+   131                                           
+   132         2      40656.9  20328.4      0.0                      img = cv2.imread(temp_image_path)
+   133         2          9.1      4.5      0.0                      if img is None:
+   134                                                                   print(f"Error: Gagal membaca gambar dari {temp_image_path}")
+   135                                                                   continue
+   136         2        183.1     91.6      0.0                      processed_image_path = os.path.join(capture_dir, f'processed_{obj_id}_{time.strftime("%H-%M-%S")}.jpg')
+   137         2      18671.0   9335.5      0.0                      cv2.imwrite(processed_image_path, img)
+   138         2        371.3    185.7      0.0                      print(f"Gambar diproses dan disimpan di: {processed_image_path}")
+   139                                           
+   140         2    5719352.4    3e+06      5.3                      image_url = upload_to_cloudinary(img)
+   141         2          3.9      1.9      0.0                      if image_url:
+   142         2        111.3     55.6      0.0                          print(f"Objek {obj_id} dengan durasi {tracked_objects[obj_id]['total_duration']} detik diunggah (notifikasi pertama)")
+   143         2         10.3      5.2      0.0                          timestamp = time.time()
+   144         2         11.1      5.6      0.0                          box = tracked_boxes[obj_id]['box']
+   145         2         42.2     21.1      0.0                          x1, y1, x2, y2 = [int(coord) for coord in box]
+   146         2          4.6      2.3      0.0                          x1_rel = x1 / frame_width
+   147         2          2.6      1.3      0.0                          y1_rel = y1 / frame_height
+   148         2          2.4      1.2      0.0                          x2_rel = x2 / frame_width
+   149         2          2.4      1.2      0.0                          y2_rel = y2 / frame_height
+   150                                                                   coords_rel = {
+   151         2          1.9      1.0      0.0                              'x1': x1_rel,
+   152         2          2.2      1.1      0.0                              'y1': y1_rel,
+   153         2          1.8      0.9      0.0                              'x2': x2_rel,
+   154         2          8.3      4.2      0.0                              'y2': y2_rel
+   155                                                                   }
+   156         2     314848.7 157424.3      0.3                          save_to_firestore_detection(timestamp, image_url, sleep_count, obj_id, tracked_objects[obj_id]['total_duration'], coords_rel, camera_id=camera_id)
+   157                                                                   # Konversi timestamp ke WIB
+   158         2        722.0    361.0      0.0                          detection_start_time_wib = datetime.fromtimestamp(tracked_objects[obj_id]['start_time'], tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
+   159         2        141.0     70.5      0.0                          detection_time_wib = datetime.fromtimestamp(tracked_objects[obj_id]['detection_time'], tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
+   160         2        119.1     59.6      0.0                          send_time_wib = datetime.fromtimestamp(timestamp, tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
+   161         2         30.9     15.5      0.0                          caption = f"Ada yang ketiduran nih | Deteksi Awal: {detection_start_time_wib}, Deteksi: {detection_time_wib}, Pengiriman: {send_time_wib}, Duration: {tracked_objects[obj_id]['total_duration']:.2f} seconds"
+   162         2    3284385.5    2e+06      3.0                          send_to_telegram(image_url, caption, tracked_objects[obj_id]['total_duration'])
+   163         2         11.7      5.9      0.0                          tracked_objects[obj_id]['notified_first'] = True
+   164         2          5.4      2.7      0.0                          tracked_objects[obj_id]['last_notification_time'] = timestamp
+   165         2         10.3      5.1      0.0                          delay = (timestamp - tracked_objects[obj_id]['detection_time']) * 1000  # Konversi ke milidetik
+   166         2        149.0     74.5      0.0                          print(f"Delay deteksi ke pengiriman untuk ID {obj_id}: {delay:.2f} ms")
+   167                                           
+   168         2        462.7    231.3      0.0                      os.remove(temp_image_path)
+   169         2        308.2    154.1      0.0                      os.remove(processed_image_path)
+   170                                           
+   171                                                           # Notifikasi kedua saat melebihi DETECTION_DURATION_CONTINUE
+   172       548       4084.2      7.5      0.0                  if tracked_objects[obj_id]['total_duration'] >= DETECTION_DURATION_CONTINUE and not tracked_objects[obj_id]['notified_second']:
+   173                                                               valid_objects = [oid for oid in tracked_objects.keys() if tracked_objects[oid]['total_duration'] >= DETECTION_DURATION_CONTINUE]
+   174                                                               sleep_count = len(valid_objects)
+   175                                                               
+   176                                                               # Tambahkan bounding box oranye untuk notifikasi kedua
+   177                                                               temp_frame = frame_for_upload.copy()
+   178                                                               x1, y1, x2, y2 = [int(coord) for coord in tracked_boxes[obj_id]['box']]
+   179                                                               cv2.rectangle(temp_frame, (x1, y1), (x2, y2), (0, 165, 255), 2)  # Oranye
+   180                                                               label = obj_id
+   181                                                               label_size, _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.6, 2)
+   182                                                               label_x = x1
+   183                                                               label_y = y1 - 10 if y1 - 10 > 10 else y1 + label_size[1] + 10
+   184                                                               cv2.rectangle(temp_frame, (label_x, label_y - label_size[1] - 4), (label_x + label_size[0] + 4, label_y + 4), (0, 165, 255), cv2.FILLED)
+   185                                                               cv2.putText(temp_frame, label, (label_x + 2, label_y - 2), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 2)
+   186                                           
+   187                                                               # Proses dan unggah notifikasi kedua
+   188                                                               temp_image_path = os.path.join(capture_dir, f'temp_{obj_id}_{time.strftime("%H-%M-%S")}.jpg')
+   189                                                               cv2.imwrite(temp_image_path, temp_frame)
+   190                                                               print(f"Gambar sementara disimpan di: {temp_image_path}")
+   191                                           
+   192                                                               img = cv2.imread(temp_image_path)
+   193                                                               if img is None:
+   194                                                                   print(f"Error: Gagal membaca gambar dari {temp_image_path}")
+   195                                                                   continue
+   196                                                               processed_image_path = os.path.join(capture_dir, f'processed_{obj_id}_{time.strftime("%H-%M-%S")}.jpg')
+   197                                                               cv2.imwrite(processed_image_path, img)
+   198                                                               print(f"Gambar diproses dan disimpan di: {processed_image_path}")
+   199                                           
+   200                                                               image_url = upload_to_cloudinary(img)
+   201                                                               if image_url:
+   202                                                                   print(f"Objek {obj_id} dengan durasi {tracked_objects[obj_id]['total_duration']} detik diunggah (notifikasi kedua)")
+   203                                                                   timestamp = time.time()
+   204                                                                   box = tracked_boxes[obj_id]['box']
+   205                                                                   x1, y1, x2, y2 = [int(coord) for coord in box]
+   206                                                                   x1_rel = x1 / frame_width
+   207                                                                   y1_rel = y1 / frame_height
+   208                                                                   x2_rel = x2 / frame_width
+   209                                                                   y2_rel = y2 / frame_height
+   210                                                                   coords_rel = {
+   211                                                                       'x1': x1_rel,
+   212                                                                       'y1': y1_rel,
+   213                                                                       'x2': x2_rel,
+   214                                                                       'y2': y2_rel
+   215                                                                   }
+   216                                                                   save_to_firestore_detection(timestamp, image_url, sleep_count, obj_id, tracked_objects[obj_id]['total_duration'], coords_rel, camera_id=camera_id)
+   217                                                                   # Konversi timestamp ke WIB
+   218                                                                   detection_start_time_wib = datetime.fromtimestamp(tracked_objects[obj_id]['start_time'], tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
+   219                                                                   detection_time_wib = datetime.fromtimestamp(tracked_objects[obj_id]['detection_time'], tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
+   220                                                                   send_time_wib = datetime.fromtimestamp(timestamp, tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
+   221                                                                   caption = f"Terpantau masih tidur ya | Deteksi Awal: {detection_start_time_wib}, Deteksi: {detection_time_wib}, Pengiriman: {send_time_wib}, Duration: {tracked_objects[obj_id]['total_duration']:.2f} seconds"
+   222                                                                   send_to_telegram(image_url, caption, tracked_objects[obj_id]['total_duration'])
+   223                                                                   tracked_objects[obj_id]['notified_second'] = True
+   224                                                                   tracked_objects[obj_id]['last_notification_time'] = timestamp
+   225                                                                   delay = (timestamp - tracked_objects[obj_id]['detection_time']) * 1000  # Konversi ke milidetik
+   226                                                                   print(f"Delay deteksi ke pengiriman untuk ID {obj_id}: {delay:.2f} ms")
+   227                                           
+   228                                                               os.remove(temp_image_path)
+   229                                                               os.remove(processed_image_path)
+   230                                                       else:
+   231         8         23.6      3.0      0.0                  start_timestamp = tracked_objects[obj_id]['start_time']
+   232         8         10.3      1.3      0.0                  end_timestamp = current_time
+   233         8         20.4      2.6      0.0                  if tracked_objects[obj_id]['total_duration'] > 0:
+   234         4    1414302.3 353575.6      1.3                      save_to_firestore_duration(start_timestamp, end_timestamp, obj_id, camera_id=camera_id)
+   235         8        442.3     55.3      0.0                  print(f"Deteksi terhenti untuk ID {obj_id}, Total Duration: {tracked_objects[obj_id]['total_duration']:.2f} detik")
+   236         8         35.1      4.4      0.0                  del tracked_objects[obj_id]
+   237                                           
+   238                                                   # Tampilkan frame untuk inferensi dengan bounding box tetap hijau
+   239       575     201509.0    350.5      0.2          frame_display = frame_resized.copy()
+   240      1123       8347.9      7.4      0.0          for obj_id, obj_data in tracked_boxes.items():
+   241       548       1320.1      2.4      0.0              if obj_id in tracked_objects:
+   242       548      14592.1     26.6      0.0                  x1, y1, x2, y2 = [int(coord) for coord in obj_data['box']]
+   243       548      46210.6     84.3      0.0                  cv2.rectangle(frame_display, (x1, y1), (x2, y2), (0, 255, 0), 2)  # Tetap hijau
+   244       548       9634.5     17.6      0.0                  cv2.putText(frame_display, f"ID: {obj_id}, Duration: {tracked_objects[obj_id]['total_duration']:.2f}s", 
+   245       548     282582.6    515.7      0.3                              (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+   246                                           
+   247       575      17307.0     30.1      0.0          fps_text = "FPS: {:.2f}".format(1 / t)
+   248       575      99272.7    172.6      0.1          cv2.putText(frame_display, fps_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+   249       575    1675273.1   2913.5      1.5          cv2.imshow("Output", frame_display)
+   250                                           
+   251       575    1976157.0   3436.8      1.8          key = cv2.waitKey(1) & 0xFF
+   252                                           
+   253                                                   # --- Blok Kode Baru: Logika untuk menangkap gambar ---
+   254       575       5736.9     10.0      0.0          if key == ord('c'):
+   255                                                       capture_count += 1
+   256                                                       image_name = os.path.join(capture_dir, f'capture_{capture_count}.png')
+   257                                                       cv2.imwrite(image_name, frame)
+   258                                                       print(f"Gambar berhasil disimpan sebagai {image_name}")
+   259                                                   # ----------------------------------------------------
+   260                                           
+   261       575       1702.4      3.0      0.0          elif key == ord('q'):
+   262                                                       for obj_id in tracked_objects:
+   263                                                           start_timestamp = tracked_objects[obj_id]['start_time']
+   264                                                           end_timestamp = time.time()
+   265                                                           if tracked_objects[obj_id]['total_duration'] > 0:
+   266                                                               save_to_firestore_duration(start_timestamp, end_timestamp, obj_id, camera_id=camera_id)
+   267                                                               print(f"Program berhenti, ID {obj_id} Total Duration: {tracked_objects[obj_id]['total_duration']:.2f} detik")
+   268                                                       break
+   269                                           
+   270                                               cap.release()
+   271                                               cv2.destroyAllWindows()
+

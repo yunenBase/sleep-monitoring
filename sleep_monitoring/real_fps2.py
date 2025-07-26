@@ -9,7 +9,7 @@ from utils.image_processing import add_padding, remove_padding, adjust_bboxes
 from utils.tracking import update_tracks
 from utils.cloud_storage import upload_to_cloudinary
 from database.firestore_db import save_to_firestore_detection, save_to_firestore_duration
-from notifications.telegram import send_to_telegram, send_to_telegram_new
+from notifications.telegram import send_to_telegram
 from datetime import datetime
 import pytz
 
@@ -25,8 +25,8 @@ model = YoloTRT(
 )
 
 # Inisialisasi video capture
-# cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
-cap = cv2.VideoCapture('videos/camlamakiri.mp4')
+cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
+# cap = cv2.VideoCapture('videos/camlamakiri.mp4')
 if not cap.isOpened():
     print("Error: Tidak dapat membuka video tes-vid.mp4")
     sys.exit()
@@ -40,16 +40,18 @@ if not os.path.exists(capture_dir):
     os.makedirs(capture_dir)
     print(f"Direktori '{capture_dir}' berhasil dibuat.")
 # -----------------------------------------------------------
-
+prev_time = time.time()
 frame_count = 0
+fps = 0
 capture_count = 0  # Variabel untuk penamaan file gambar
 tracked_objects = {}  # {id: {'start_time': float, 'total_duration': float, 'last_notification_time': float, 'notified_first': bool, 'notified_second': bool, 'detection_time': float}}
 tracked_boxes = {}    # {id: {'centroid': tuple, 'box': list, 'class': str, 'conf': float}}
 next_id = 0
-camera_id = 1  # Identitas kamera
+camera_id = 2  # Identitas kamera
 
 # Main loop
 while True:
+    start_time = time.time()  # Mulai hitung waktu pemrosesan
     ret, frame = cap.read()  # 'frame' adalah gambar asli
     if not ret:
         print("Gagal mengambil frame dari video")
@@ -217,7 +219,7 @@ while True:
                     detection_time_wib = datetime.fromtimestamp(tracked_objects[obj_id]['detection_time'], tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
                     send_time_wib = datetime.fromtimestamp(timestamp, tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
                     caption = f"Terpantau masih tidur ya | Deteksi Awal: {detection_start_time_wib}, Deteksi: {detection_time_wib}, Pengiriman: {send_time_wib}, Duration: {tracked_objects[obj_id]['total_duration']:.2f} seconds"
-                    send_to_telegram_new(image_url, caption, tracked_objects[obj_id]['total_duration'])
+                    send_to_telegram(image_url, caption, tracked_objects[obj_id]['total_duration'])
                     tracked_objects[obj_id]['notified_second'] = True
                     tracked_objects[obj_id]['last_notification_time'] = timestamp
                     delay = (timestamp - tracked_objects[obj_id]['detection_time']) * 1000  # Konversi ke milidetik
@@ -242,9 +244,21 @@ while True:
             cv2.putText(frame_display, f"ID: {obj_id}, Duration: {tracked_objects[obj_id]['total_duration']:.2f}s", 
                         (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
-    fps_text = "FPS: {:.2f}".format(1 / t)
+    # Hitung dan tampilkan FPS sebenarnya
+    current_time = time.time()
+    if current_time - prev_time >= 1.0:  # Update FPS setiap 1 detik
+        fps = frame_count / (current_time - prev_time)
+        frame_count = 0
+        prev_time = current_time
+    fps_text = "FPS: {:.2f}".format(fps)
     cv2.putText(frame_display, fps_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+
     cv2.imshow("Output", frame_display)
+
+    # Sinkronisasi dengan frame rate target (60 fps)
+    process_time = time.time() - start_time
+    sleep_time = max(0, 1/60 - process_time)  # Target 60 fps (~16.67 ms per frame)
+    time.sleep(sleep_time)
 
     key = cv2.waitKey(1) & 0xFF
 

@@ -1,0 +1,456 @@
+2025-07-26 18:40:08,723 - INFO - Frame 1: 1 objek terdeteksi
+2025-07-26 18:40:08,724 - INFO - Deteksi baru untuk ID 1_1753530008
+2025-07-26 18:40:08,724 - INFO - ID 1_1753530008: Durasi deteksi = 0.00 detik, Total Duration = 0.00 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:08,726 - INFO - INFO: CAM_ID=1 FPS=13.48
+2025-07-26 18:40:08,999 - INFO - Frame 2: 1 objek terdeteksi
+2025-07-26 18:40:09,001 - INFO - ID 1_1753530008: Durasi deteksi = 0.28 detik, Total Duration = 0.28 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:09,002 - INFO - INFO: CAM_ID=1 FPS=30.07
+2025-07-26 18:40:09,186 - INFO - Frame 3: 1 objek terdeteksi
+2025-07-26 18:40:09,193 - INFO - ID 1_1753530008: Durasi deteksi = 0.47 detik, Total Duration = 0.47 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:09,194 - INFO - INFO: CAM_ID=1 FPS=23.59
+2025-07-26 18:40:09,327 - INFO - Frame 4: 1 objek terdeteksi
+2025-07-26 18:40:09,329 - INFO - ID 1_1753530008: Durasi deteksi = 0.60 detik, Total Duration = 0.60 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:09,330 - INFO - INFO: CAM_ID=1 FPS=28.38
+2025-07-26 18:40:09,422 - INFO - Frame 5: 1 objek terdeteksi
+2025-07-26 18:40:09,423 - INFO - ID 1_1753530008: Durasi deteksi = 0.70 detik, Total Duration = 0.70 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:09,425 - INFO - INFO: CAM_ID=1 FPS=30.92
+2025-07-26 18:40:09,525 - INFO - Frame 6: 1 objek terdeteksi
+2025-07-26 18:40:09,526 - INFO - ID 1_1753530008: Durasi deteksi = 0.80 detik, Total Duration = 0.80 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:09,528 - INFO - INFO: CAM_ID=1 FPS=28.87
+2025-07-26 18:40:09,638 - INFO - Frame 7: 1 objek terdeteksi
+2025-07-26 18:40:09,640 - INFO - ID 1_1753530008: Durasi deteksi = 0.92 detik, Total Duration = 0.92 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:09,641 - INFO - INFO: CAM_ID=1 FPS=28.98
+2025-07-26 18:40:09,753 - INFO - Frame 8: 1 objek terdeteksi
+2025-07-26 18:40:09,755 - INFO - ID 1_1753530008: Durasi deteksi = 1.03 detik, Total Duration = 1.03 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:09,756 - INFO - INFO: CAM_ID=1 FPS=29.66
+2025-07-26 18:40:09,881 - INFO - Frame 9: 1 objek terdeteksi
+2025-07-26 18:40:09,897 - INFO - ID 1_1753530008: Durasi deteksi = 1.17 detik, Total Duration = 1.17 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:09,898 - INFO - INFO: CAM_ID=1 FPS=18.97
+2025-07-26 18:40:10,045 - INFO - Frame 10: 2 objek terdeteksi
+2025-07-26 18:40:10,046 - INFO - Deteksi baru untuk ID 1_1753530010
+2025-07-26 18:40:10,047 - INFO - ID 1_1753530008: Durasi deteksi = 1.32 detik, Total Duration = 1.32 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,048 - INFO - ID 1_1753530010: Durasi deteksi = 0.00 detik, Total Duration = 0.00 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,049 - INFO - INFO: CAM_ID=1 FPS=23.71
+2025-07-26 18:40:10,169 - INFO - Frame 11: 2 objek terdeteksi
+2025-07-26 18:40:10,170 - INFO - ID 1_1753530008: Durasi deteksi = 1.45 detik, Total Duration = 1.45 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,171 - INFO - ID 1_1753530010: Durasi deteksi = 0.12 detik, Total Duration = 0.12 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,173 - INFO - INFO: CAM_ID=1 FPS=29.12
+2025-07-26 18:40:10,297 - INFO - Frame 12: 3 objek terdeteksi
+2025-07-26 18:40:10,298 - INFO - Deteksi baru untuk ID 1_1753530010
+2025-07-26 18:40:10,299 - INFO - ID 1_1753530008: Durasi deteksi = 1.57 detik, Total Duration = 1.57 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,299 - INFO - ID 1_1753530010: Durasi deteksi = 0.00 detik, Total Duration = 0.00 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,301 - INFO - INFO: CAM_ID=1 FPS=22.05
+2025-07-26 18:40:10,439 - INFO - Frame 13: 3 objek terdeteksi
+2025-07-26 18:40:10,440 - INFO - Deteksi baru untuk ID 1_1753530010
+2025-07-26 18:40:10,441 - INFO - ID 1_1753530008: Durasi deteksi = 1.72 detik, Total Duration = 1.72 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,442 - INFO - ID 1_1753530010: Durasi deteksi = 0.00 detik, Total Duration = 0.00 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,444 - INFO - INFO: CAM_ID=1 FPS=26.27
+2025-07-26 18:40:10,588 - INFO - Frame 14: 3 objek terdeteksi
+2025-07-26 18:40:10,589 - INFO - Deteksi baru untuk ID 1_1753530010
+2025-07-26 18:40:10,589 - INFO - ID 1_1753530008: Durasi deteksi = 1.87 detik, Total Duration = 1.87 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,590 - INFO - ID 1_1753530010: Durasi deteksi = 0.00 detik, Total Duration = 0.00 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,591 - INFO - INFO: CAM_ID=1 FPS=29.21
+2025-07-26 18:40:10,684 - INFO - Frame 15: 3 objek terdeteksi
+2025-07-26 18:40:10,686 - INFO - Deteksi baru untuk ID 1_1753530010
+2025-07-26 18:40:10,686 - INFO - ID 1_1753530008: Durasi deteksi = 1.96 detik, Total Duration = 1.96 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,687 - INFO - ID 1_1753530010: Durasi deteksi = 0.00 detik, Total Duration = 0.00 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,689 - INFO - INFO: CAM_ID=1 FPS=30.26
+2025-07-26 18:40:10,872 - INFO - Frame 16: 3 objek terdeteksi
+2025-07-26 18:40:10,873 - INFO - Deteksi baru untuk ID 1_1753530010
+2025-07-26 18:40:10,874 - INFO - ID 1_1753530008: Durasi deteksi = 2.15 detik, Total Duration = 2.15 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,875 - INFO - ID 1_1753530010: Durasi deteksi = 0.00 detik, Total Duration = 0.00 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:10,876 - INFO - INFO: CAM_ID=1 FPS=28.39
+2025-07-26 18:40:11,033 - INFO - Frame 17: 2 objek terdeteksi
+2025-07-26 18:40:11,034 - INFO - Deteksi baru untuk ID 1_1753530011
+2025-07-26 18:40:11,035 - INFO - ID 1_1753530008: Durasi deteksi = 2.31 detik, Total Duration = 2.31 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:11,036 - INFO - Deteksi terhenti untuk ID 1_1753530010, Total Duration: 0.00 detik
+2025-07-26 18:40:11,037 - INFO - ID 1_1753530011: Durasi deteksi = 0.00 detik, Total Duration = 0.00 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:11,038 - INFO - INFO: CAM_ID=1 FPS=29.10
+2025-07-26 18:40:11,144 - INFO - Frame 18: 2 objek terdeteksi
+2025-07-26 18:40:11,145 - INFO - ID 1_1753530008: Durasi deteksi = 2.42 detik, Total Duration = 2.42 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:11,146 - INFO - ID 1_1753530011: Durasi deteksi = 0.11 detik, Total Duration = 0.11 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:11,147 - INFO - INFO: CAM_ID=1 FPS=28.51
+2025-07-26 18:40:11,286 - INFO - Frame 19: 1 objek terdeteksi
+2025-07-26 18:40:11,288 - INFO - ID 1_1753530008: Durasi deteksi = 2.56 detik, Total Duration = 2.56 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:12,389 - INFO - Deteksi terhenti untuk ID 1_1753530011, Total Duration: 0.11 detik
+2025-07-26 18:40:12,390 - INFO - INFO: CAM_ID=1 FPS=23.10
+2025-07-26 18:40:12,482 - INFO - Frame 20: 1 objek terdeteksi
+2025-07-26 18:40:12,484 - INFO - ID 1_1753530008: Durasi deteksi = 3.76 detik, Total Duration = 3.76 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:12,485 - INFO - INFO: CAM_ID=1 FPS=28.99
+2025-07-26 18:40:12,602 - INFO - Frame 21: 1 objek terdeteksi
+2025-07-26 18:40:12,604 - INFO - ID 1_1753530008: Durasi deteksi = 3.88 detik, Total Duration = 3.88 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:12,605 - INFO - INFO: CAM_ID=1 FPS=30.50
+2025-07-26 18:40:12,730 - INFO - Frame 22: 1 objek terdeteksi
+2025-07-26 18:40:12,732 - INFO - ID 1_1753530008: Durasi deteksi = 4.01 detik, Total Duration = 4.01 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:12,733 - INFO - INFO: CAM_ID=1 FPS=25.20
+2025-07-26 18:40:12,863 - INFO - Frame 23: 3 objek terdeteksi
+2025-07-26 18:40:12,865 - INFO - Deteksi baru untuk ID 1_1753530012
+2025-07-26 18:40:12,876 - INFO - Deteksi baru untuk ID 1_1753530012
+2025-07-26 18:40:12,877 - INFO - ID 1_1753530008: Durasi deteksi = 4.14 detik, Total Duration = 4.14 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:12,877 - INFO - ID 1_1753530012: Durasi deteksi = 0.00 detik, Total Duration = 0.00 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:12,879 - INFO - INFO: CAM_ID=1 FPS=28.05
+2025-07-26 18:40:12,992 - INFO - Frame 24: 2 objek terdeteksi
+2025-07-26 18:40:12,995 - INFO - Deteksi baru untuk ID 1_1753530012
+2025-07-26 18:40:12,995 - INFO - ID 1_1753530008: Durasi deteksi = 4.27 detik, Total Duration = 4.27 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:12,996 - INFO - ID 1_1753530012: Durasi deteksi = 0.00 detik, Total Duration = 0.00 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:12,997 - INFO - INFO: CAM_ID=1 FPS=30.56
+2025-07-26 18:40:13,094 - INFO - Frame 25: 1 objek terdeteksi
+2025-07-26 18:40:13,095 - INFO - ID 1_1753530008: Durasi deteksi = 4.37 detik, Total Duration = 4.37 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:13,096 - INFO - Deteksi terhenti untuk ID 1_1753530012, Total Duration: 0.00 detik
+2025-07-26 18:40:13,097 - INFO - INFO: CAM_ID=1 FPS=26.94
+2025-07-26 18:40:13,219 - INFO - Frame 26: 1 objek terdeteksi
+2025-07-26 18:40:13,221 - INFO - ID 1_1753530008: Durasi deteksi = 4.50 detik, Total Duration = 4.50 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:13,222 - INFO - INFO: CAM_ID=1 FPS=30.25
+2025-07-26 18:40:13,391 - INFO - Frame 27: 1 objek terdeteksi
+2025-07-26 18:40:13,393 - INFO - ID 1_1753530008: Durasi deteksi = 4.67 detik, Total Duration = 4.67 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:13,395 - INFO - INFO: CAM_ID=1 FPS=29.99
+2025-07-26 18:40:13,525 - INFO - Frame 28: 1 objek terdeteksi
+2025-07-26 18:40:13,526 - INFO - ID 1_1753530008: Durasi deteksi = 4.80 detik, Total Duration = 4.80 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:13,528 - INFO - INFO: CAM_ID=1 FPS=29.14
+2025-07-26 18:40:13,625 - INFO - Frame 29: 1 objek terdeteksi
+2025-07-26 18:40:13,626 - INFO - ID 1_1753530008: Durasi deteksi = 4.90 detik, Total Duration = 4.90 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:13,627 - INFO - INFO: CAM_ID=1 FPS=29.42
+2025-07-26 18:40:13,744 - INFO - Frame 30: 1 objek terdeteksi
+2025-07-26 18:40:13,748 - INFO - ID 1_1753530008: Durasi deteksi = 5.02 detik, Total Duration = 5.02 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:13,756 - INFO - INFO: CAM_ID=1 FPS=30.32
+2025-07-26 18:40:13,942 - INFO - Frame 31: 1 objek terdeteksi
+2025-07-26 18:40:13,943 - INFO - ID 1_1753530008: Durasi deteksi = 5.22 detik, Total Duration = 5.22 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:13,944 - INFO - INFO: CAM_ID=1 FPS=30.21
+2025-07-26 18:40:14,040 - INFO - Frame 32: 1 objek terdeteksi
+2025-07-26 18:40:14,041 - INFO - ID 1_1753530008: Durasi deteksi = 5.32 detik, Total Duration = 5.32 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:14,044 - INFO - INFO: CAM_ID=1 FPS=29.84
+2025-07-26 18:40:14,208 - INFO - Frame 33: 1 objek terdeteksi
+2025-07-26 18:40:14,209 - INFO - ID 1_1753530008: Durasi deteksi = 5.49 detik, Total Duration = 5.49 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:14,211 - INFO - INFO: CAM_ID=1 FPS=30.28
+2025-07-26 18:40:14,362 - INFO - Frame 34: 1 objek terdeteksi
+2025-07-26 18:40:14,364 - INFO - ID 1_1753530008: Durasi deteksi = 5.64 detik, Total Duration = 5.64 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:14,365 - INFO - INFO: CAM_ID=1 FPS=30.12
+2025-07-26 18:40:14,540 - INFO - Frame 35: 1 objek terdeteksi
+2025-07-26 18:40:14,541 - INFO - ID 1_1753530008: Durasi deteksi = 5.82 detik, Total Duration = 5.82 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:14,543 - INFO - INFO: CAM_ID=1 FPS=25.03
+2025-07-26 18:40:14,665 - INFO - Frame 36: 1 objek terdeteksi
+2025-07-26 18:40:14,666 - INFO - ID 1_1753530008: Durasi deteksi = 5.94 detik, Total Duration = 5.94 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:14,668 - INFO - INFO: CAM_ID=1 FPS=30.50
+2025-07-26 18:40:14,853 - INFO - Frame 37: 1 objek terdeteksi
+2025-07-26 18:40:14,854 - INFO - ID 1_1753530008: Durasi deteksi = 6.13 detik, Total Duration = 6.13 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:14,855 - INFO - INFO: CAM_ID=1 FPS=30.04
+2025-07-26 18:40:14,971 - INFO - Frame 38: 1 objek terdeteksi
+2025-07-26 18:40:14,973 - INFO - ID 1_1753530008: Durasi deteksi = 6.25 detik, Total Duration = 6.25 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:14,974 - INFO - INFO: CAM_ID=1 FPS=27.83
+2025-07-26 18:40:15,166 - INFO - Frame 39: 1 objek terdeteksi
+2025-07-26 18:40:15,167 - INFO - ID 1_1753530008: Durasi deteksi = 6.44 detik, Total Duration = 6.44 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:15,169 - INFO - INFO: CAM_ID=1 FPS=30.82
+2025-07-26 18:40:15,266 - INFO - Frame 40: 1 objek terdeteksi
+2025-07-26 18:40:15,267 - INFO - ID 1_1753530008: Durasi deteksi = 6.54 detik, Total Duration = 6.54 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:15,269 - INFO - INFO: CAM_ID=1 FPS=29.49
+2025-07-26 18:40:15,398 - INFO - Frame 41: 1 objek terdeteksi
+2025-07-26 18:40:15,399 - INFO - ID 1_1753530008: Durasi deteksi = 6.68 detik, Total Duration = 6.68 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:15,400 - INFO - INFO: CAM_ID=1 FPS=30.86
+2025-07-26 18:40:15,596 - INFO - Frame 42: 1 objek terdeteksi
+2025-07-26 18:40:15,597 - INFO - ID 1_1753530008: Durasi deteksi = 6.87 detik, Total Duration = 6.87 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:15,599 - INFO - INFO: CAM_ID=1 FPS=26.71
+2025-07-26 18:40:15,696 - INFO - Frame 43: 1 objek terdeteksi
+2025-07-26 18:40:15,697 - INFO - ID 1_1753530008: Durasi deteksi = 6.97 detik, Total Duration = 6.97 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:15,698 - INFO - INFO: CAM_ID=1 FPS=30.63
+2025-07-26 18:40:15,870 - INFO - Frame 44: 1 objek terdeteksi
+2025-07-26 18:40:15,871 - INFO - ID 1_1753530008: Durasi deteksi = 7.15 detik, Total Duration = 7.15 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:15,872 - INFO - INFO: CAM_ID=1 FPS=30.68
+2025-07-26 18:40:16,008 - INFO - Frame 45: 1 objek terdeteksi
+2025-07-26 18:40:16,009 - INFO - ID 1_1753530008: Durasi deteksi = 7.29 detik, Total Duration = 7.29 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:16,010 - INFO - INFO: CAM_ID=1 FPS=25.50
+2025-07-26 18:40:16,196 - INFO - Frame 46: 1 objek terdeteksi
+2025-07-26 18:40:16,197 - INFO - ID 1_1753530008: Durasi deteksi = 7.47 detik, Total Duration = 7.47 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:16,200 - INFO - INFO: CAM_ID=1 FPS=30.23
+2025-07-26 18:40:16,294 - INFO - Frame 47: 1 objek terdeteksi
+2025-07-26 18:40:16,295 - INFO - ID 1_1753530008: Durasi deteksi = 7.57 detik, Total Duration = 7.57 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:16,296 - INFO - INFO: CAM_ID=1 FPS=30.28
+2025-07-26 18:40:16,503 - INFO - Frame 48: 1 objek terdeteksi
+2025-07-26 18:40:16,505 - INFO - ID 1_1753530008: Durasi deteksi = 7.78 detik, Total Duration = 7.78 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:16,506 - INFO - INFO: CAM_ID=1 FPS=27.34
+2025-07-26 18:40:16,615 - INFO - Frame 49: 1 objek terdeteksi
+2025-07-26 18:40:16,616 - INFO - ID 1_1753530008: Durasi deteksi = 7.89 detik, Total Duration = 7.89 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:16,617 - INFO - INFO: CAM_ID=1 FPS=28.10
+2025-07-26 18:40:16,770 - INFO - Frame 50: 1 objek terdeteksi
+2025-07-26 18:40:16,772 - INFO - ID 1_1753530008: Durasi deteksi = 8.05 detik, Total Duration = 8.05 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:16,773 - INFO - INFO: CAM_ID=1 FPS=31.02
+2025-07-26 18:40:16,908 - INFO - Frame 51: 1 objek terdeteksi
+2025-07-26 18:40:16,909 - INFO - ID 1_1753530008: Durasi deteksi = 8.18 detik, Total Duration = 8.18 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:16,910 - INFO - INFO: CAM_ID=1 FPS=30.54
+2025-07-26 18:40:17,124 - INFO - Frame 52: 1 objek terdeteksi
+2025-07-26 18:40:17,126 - INFO - ID 1_1753530008: Durasi deteksi = 8.40 detik, Total Duration = 8.40 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:17,127 - INFO - INFO: CAM_ID=1 FPS=30.43
+2025-07-26 18:40:17,292 - INFO - Frame 53: 1 objek terdeteksi
+2025-07-26 18:40:17,293 - INFO - ID 1_1753530008: Durasi deteksi = 8.57 detik, Total Duration = 8.57 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:17,294 - INFO - INFO: CAM_ID=1 FPS=30.81
+2025-07-26 18:40:17,435 - INFO - Frame 54: 1 objek terdeteksi
+2025-07-26 18:40:17,436 - INFO - ID 1_1753530008: Durasi deteksi = 8.71 detik, Total Duration = 8.71 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:17,437 - INFO - INFO: CAM_ID=1 FPS=27.74
+2025-07-26 18:40:17,531 - INFO - Frame 55: 1 objek terdeteksi
+2025-07-26 18:40:17,533 - INFO - ID 1_1753530008: Durasi deteksi = 8.81 detik, Total Duration = 8.81 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:17,534 - INFO - INFO: CAM_ID=1 FPS=30.89
+2025-07-26 18:40:17,654 - INFO - Frame 56: 1 objek terdeteksi
+2025-07-26 18:40:17,655 - INFO - ID 1_1753530008: Durasi deteksi = 8.93 detik, Total Duration = 8.93 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:17,659 - INFO - INFO: CAM_ID=1 FPS=23.98
+2025-07-26 18:40:17,829 - INFO - Frame 57: 1 objek terdeteksi
+2025-07-26 18:40:17,830 - INFO - ID 1_1753530008: Durasi deteksi = 9.11 detik, Total Duration = 9.11 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:17,831 - INFO - INFO: CAM_ID=1 FPS=27.94
+2025-07-26 18:40:18,005 - INFO - Frame 58: 1 objek terdeteksi
+2025-07-26 18:40:18,006 - INFO - ID 1_1753530008: Durasi deteksi = 9.28 detik, Total Duration = 9.28 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:18,007 - INFO - INFO: CAM_ID=1 FPS=27.69
+2025-07-26 18:40:18,116 - INFO - Frame 59: 1 objek terdeteksi
+2025-07-26 18:40:18,124 - INFO - ID 1_1753530008: Durasi deteksi = 9.40 detik, Total Duration = 9.40 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:18,125 - INFO - INFO: CAM_ID=1 FPS=28.76
+2025-07-26 18:40:18,261 - INFO - Frame 60: 1 objek terdeteksi
+2025-07-26 18:40:18,263 - INFO - ID 1_1753530008: Durasi deteksi = 9.54 detik, Total Duration = 9.54 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:18,277 - INFO - INFO: CAM_ID=1 FPS=15.89
+2025-07-26 18:40:18,428 - INFO - Frame 61: 1 objek terdeteksi
+2025-07-26 18:40:18,429 - INFO - ID 1_1753530008: Durasi deteksi = 9.71 detik, Total Duration = 9.71 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:18,430 - INFO - INFO: CAM_ID=1 FPS=25.43
+2025-07-26 18:40:18,599 - INFO - Frame 62: 1 objek terdeteksi
+2025-07-26 18:40:18,600 - INFO - ID 1_1753530008: Durasi deteksi = 9.88 detik, Total Duration = 9.88 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:18,602 - INFO - INFO: CAM_ID=1 FPS=29.67
+2025-07-26 18:40:18,739 - INFO - Frame 63: 1 objek terdeteksi
+2025-07-26 18:40:18,740 - INFO - ID 1_1753530008: Durasi deteksi = 10.02 detik, Total Duration = 10.02 detik, Notified First = False, Notified Second = False
+2025-07-26 18:40:18,755 - INFO - Gambar sementara disimpan di: capture/temp_1_1753530008_18-40-18.jpg
+2025-07-26 18:40:18,795 - INFO - Gambar diproses dan disimpan di: capture/processed_1_1753530008_18-40-18.jpg
+2025-07-26 18:40:21,646 - INFO - Objek 1_1753530008 dengan durasi 10.01627779006958 detik diunggah (notifikasi pertama)
+2025-07-26 18:40:23,266 - INFO - Delay deteksi ke pengiriman untuk ID 1_1753530008: 2906.68 ms
+2025-07-26 18:40:23,268 - INFO - INFO: CAM_ID=1 FPS=30.79
+2025-07-26 18:40:23,371 - INFO - Frame 64: 1 objek terdeteksi
+2025-07-26 18:40:23,373 - INFO - ID 1_1753530008: Durasi deteksi = 14.65 detik, Total Duration = 14.65 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:23,374 - INFO - INFO: CAM_ID=1 FPS=23.07
+2025-07-26 18:40:23,492 - INFO - Frame 65: 1 objek terdeteksi
+2025-07-26 18:40:23,494 - INFO - ID 1_1753530008: Durasi deteksi = 14.77 detik, Total Duration = 14.77 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:23,495 - INFO - INFO: CAM_ID=1 FPS=30.76
+2025-07-26 18:40:23,640 - INFO - Frame 66: 1 objek terdeteksi
+2025-07-26 18:40:23,642 - INFO - ID 1_1753530008: Durasi deteksi = 14.92 detik, Total Duration = 14.92 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:23,643 - INFO - INFO: CAM_ID=1 FPS=23.34
+2025-07-26 18:40:23,756 - INFO - Frame 67: 1 objek terdeteksi
+2025-07-26 18:40:23,757 - INFO - ID 1_1753530008: Durasi deteksi = 15.03 detik, Total Duration = 15.03 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:23,764 - INFO - INFO: CAM_ID=1 FPS=28.45
+2025-07-26 18:40:23,922 - INFO - Frame 68: 1 objek terdeteksi
+2025-07-26 18:40:23,924 - INFO - ID 1_1753530008: Durasi deteksi = 15.20 detik, Total Duration = 15.20 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:23,926 - INFO - INFO: CAM_ID=1 FPS=28.83
+2025-07-26 18:40:24,063 - INFO - Frame 69: 1 objek terdeteksi
+2025-07-26 18:40:24,065 - INFO - ID 1_1753530008: Durasi deteksi = 15.34 detik, Total Duration = 15.34 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:24,067 - INFO - INFO: CAM_ID=1 FPS=27.90
+2025-07-26 18:40:24,164 - INFO - Frame 70: 1 objek terdeteksi
+2025-07-26 18:40:24,165 - INFO - ID 1_1753530008: Durasi deteksi = 15.44 detik, Total Duration = 15.44 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:24,166 - INFO - INFO: CAM_ID=1 FPS=30.57
+2025-07-26 18:40:24,333 - INFO - Frame 71: 1 objek terdeteksi
+2025-07-26 18:40:24,334 - INFO - ID 1_1753530008: Durasi deteksi = 15.61 detik, Total Duration = 15.61 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:24,336 - INFO - INFO: CAM_ID=1 FPS=14.06
+2025-07-26 18:40:24,436 - INFO - Frame 72: 1 objek terdeteksi
+2025-07-26 18:40:24,437 - INFO - ID 1_1753530008: Durasi deteksi = 15.71 detik, Total Duration = 15.71 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:24,438 - INFO - INFO: CAM_ID=1 FPS=30.40
+2025-07-26 18:40:24,586 - INFO - Frame 73: 1 objek terdeteksi
+2025-07-26 18:40:24,587 - INFO - ID 1_1753530008: Durasi deteksi = 15.86 detik, Total Duration = 15.86 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:24,588 - INFO - INFO: CAM_ID=1 FPS=27.52
+2025-07-26 18:40:24,711 - INFO - Frame 74: 1 objek terdeteksi
+2025-07-26 18:40:24,712 - INFO - ID 1_1753530008: Durasi deteksi = 15.99 detik, Total Duration = 15.99 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:24,713 - INFO - INFO: CAM_ID=1 FPS=27.37
+2025-07-26 18:40:24,862 - INFO - Frame 75: 1 objek terdeteksi
+2025-07-26 18:40:24,863 - INFO - ID 1_1753530008: Durasi deteksi = 16.14 detik, Total Duration = 16.14 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:24,864 - INFO - INFO: CAM_ID=1 FPS=28.94
+2025-07-26 18:40:24,978 - INFO - Frame 76: 1 objek terdeteksi
+2025-07-26 18:40:24,980 - INFO - ID 1_1753530008: Durasi deteksi = 16.26 detik, Total Duration = 16.26 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:24,981 - INFO - INFO: CAM_ID=1 FPS=26.91
+2025-07-26 18:40:25,138 - INFO - Frame 77: 1 objek terdeteksi
+2025-07-26 18:40:25,140 - INFO - ID 1_1753530008: Durasi deteksi = 16.42 detik, Total Duration = 16.42 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:25,141 - INFO - INFO: CAM_ID=1 FPS=23.24
+2025-07-26 18:40:25,285 - INFO - Frame 78: 1 objek terdeteksi
+2025-07-26 18:40:25,286 - INFO - ID 1_1753530008: Durasi deteksi = 16.56 detik, Total Duration = 16.56 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:25,287 - INFO - INFO: CAM_ID=1 FPS=27.16
+2025-07-26 18:40:25,397 - INFO - Frame 79: 1 objek terdeteksi
+2025-07-26 18:40:25,399 - INFO - ID 1_1753530008: Durasi deteksi = 16.67 detik, Total Duration = 16.67 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:25,400 - INFO - INFO: CAM_ID=1 FPS=28.31
+2025-07-26 18:40:25,582 - INFO - Frame 80: 1 objek terdeteksi
+2025-07-26 18:40:25,584 - INFO - ID 1_1753530008: Durasi deteksi = 16.86 detik, Total Duration = 16.86 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:25,585 - INFO - INFO: CAM_ID=1 FPS=29.43
+2025-07-26 18:40:25,704 - INFO - Frame 81: 1 objek terdeteksi
+2025-07-26 18:40:25,705 - INFO - ID 1_1753530008: Durasi deteksi = 16.98 detik, Total Duration = 16.98 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:25,707 - INFO - INFO: CAM_ID=1 FPS=30.24
+2025-07-26 18:40:25,885 - INFO - Frame 82: 1 objek terdeteksi
+2025-07-26 18:40:25,895 - INFO - ID 1_1753530008: Durasi deteksi = 17.17 detik, Total Duration = 17.17 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:25,896 - INFO - INFO: CAM_ID=1 FPS=24.23
+2025-07-26 18:40:25,986 - INFO - Frame 83: 1 objek terdeteksi
+2025-07-26 18:40:25,988 - INFO - ID 1_1753530008: Durasi deteksi = 17.26 detik, Total Duration = 17.26 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:25,989 - INFO - INFO: CAM_ID=1 FPS=30.79
+2025-07-26 18:40:26,166 - INFO - Frame 84: 1 objek terdeteksi
+2025-07-26 18:40:26,168 - INFO - ID 1_1753530008: Durasi deteksi = 17.44 detik, Total Duration = 17.44 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:26,169 - INFO - INFO: CAM_ID=1 FPS=26.21
+2025-07-26 18:40:26,296 - INFO - Frame 85: 1 objek terdeteksi
+2025-07-26 18:40:26,297 - INFO - ID 1_1753530008: Durasi deteksi = 17.57 detik, Total Duration = 17.57 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:26,299 - INFO - INFO: CAM_ID=1 FPS=29.27
+2025-07-26 18:40:26,473 - INFO - Frame 86: 1 objek terdeteksi
+2025-07-26 18:40:26,475 - INFO - ID 1_1753530008: Durasi deteksi = 17.75 detik, Total Duration = 17.75 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:26,476 - INFO - INFO: CAM_ID=1 FPS=28.94
+2025-07-26 18:40:26,582 - INFO - Frame 87: 1 objek terdeteksi
+2025-07-26 18:40:26,584 - INFO - ID 1_1753530008: Durasi deteksi = 17.86 detik, Total Duration = 17.86 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:26,585 - INFO - INFO: CAM_ID=1 FPS=29.06
+2025-07-26 18:40:26,712 - INFO - Frame 88: 1 objek terdeteksi
+2025-07-26 18:40:26,713 - INFO - ID 1_1753530008: Durasi deteksi = 17.99 detik, Total Duration = 17.99 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:26,714 - INFO - INFO: CAM_ID=1 FPS=30.77
+2025-07-26 18:40:26,804 - INFO - Frame 89: 1 objek terdeteksi
+2025-07-26 18:40:26,813 - INFO - ID 1_1753530008: Durasi deteksi = 18.09 detik, Total Duration = 18.09 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:26,814 - INFO - INFO: CAM_ID=1 FPS=30.80
+2025-07-26 18:40:27,031 - INFO - Frame 90: 1 objek terdeteksi
+2025-07-26 18:40:27,033 - INFO - ID 1_1753530008: Durasi deteksi = 18.31 detik, Total Duration = 18.31 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:27,035 - INFO - INFO: CAM_ID=1 FPS=25.30
+2025-07-26 18:40:27,161 - INFO - Frame 91: 1 objek terdeteksi
+2025-07-26 18:40:27,163 - INFO - ID 1_1753530008: Durasi deteksi = 18.44 detik, Total Duration = 18.44 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:27,164 - INFO - INFO: CAM_ID=1 FPS=16.57
+2025-07-26 18:40:27,291 - INFO - Frame 92: 1 objek terdeteksi
+2025-07-26 18:40:27,296 - INFO - ID 1_1753530008: Durasi deteksi = 18.57 detik, Total Duration = 18.57 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:27,297 - INFO - INFO: CAM_ID=1 FPS=30.02
+2025-07-26 18:40:27,392 - INFO - Frame 93: 1 objek terdeteksi
+2025-07-26 18:40:27,394 - INFO - ID 1_1753530008: Durasi deteksi = 18.67 detik, Total Duration = 18.67 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:27,395 - INFO - INFO: CAM_ID=1 FPS=30.86
+2025-07-26 18:40:27,554 - INFO - Frame 94: 1 objek terdeteksi
+2025-07-26 18:40:27,556 - INFO - ID 1_1753530008: Durasi deteksi = 18.83 detik, Total Duration = 18.83 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:27,557 - INFO - INFO: CAM_ID=1 FPS=24.34
+2025-07-26 18:40:27,688 - INFO - Frame 95: 1 objek terdeteksi
+2025-07-26 18:40:27,690 - INFO - ID 1_1753530008: Durasi deteksi = 18.97 detik, Total Duration = 18.97 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:27,691 - INFO - INFO: CAM_ID=1 FPS=29.18
+2025-07-26 18:40:27,822 - INFO - Frame 96: 1 objek terdeteksi
+2025-07-26 18:40:27,826 - INFO - ID 1_1753530008: Durasi deteksi = 19.10 detik, Total Duration = 19.10 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:27,828 - INFO - INFO: CAM_ID=1 FPS=25.56
+2025-07-26 18:40:27,954 - INFO - Frame 97: 1 objek terdeteksi
+2025-07-26 18:40:27,955 - INFO - ID 1_1753530008: Durasi deteksi = 19.23 detik, Total Duration = 19.23 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:27,957 - INFO - INFO: CAM_ID=1 FPS=29.33
+2025-07-26 18:40:28,058 - INFO - Frame 98: 1 objek terdeteksi
+2025-07-26 18:40:28,059 - INFO - ID 1_1753530008: Durasi deteksi = 19.34 detik, Total Duration = 19.34 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:28,060 - INFO - INFO: CAM_ID=1 FPS=29.87
+2025-07-26 18:40:28,198 - INFO - Frame 99: 1 objek terdeteksi
+2025-07-26 18:40:28,199 - INFO - ID 1_1753530008: Durasi deteksi = 19.47 detik, Total Duration = 19.47 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:28,200 - INFO - INFO: CAM_ID=1 FPS=30.66
+2025-07-26 18:40:28,300 - INFO - Frame 100: 1 objek terdeteksi
+2025-07-26 18:40:28,302 - INFO - ID 1_1753530008: Durasi deteksi = 19.58 detik, Total Duration = 19.58 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:28,303 - INFO - INFO: CAM_ID=1 FPS=30.62
+2025-07-26 18:40:28,408 - INFO - Frame 101: 1 objek terdeteksi
+2025-07-26 18:40:28,409 - INFO - ID 1_1753530008: Durasi deteksi = 19.69 detik, Total Duration = 19.69 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:28,411 - INFO - INFO: CAM_ID=1 FPS=30.77
+2025-07-26 18:40:28,533 - INFO - Frame 102: 1 objek terdeteksi
+2025-07-26 18:40:28,534 - INFO - ID 1_1753530008: Durasi deteksi = 19.81 detik, Total Duration = 19.81 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:28,535 - INFO - INFO: CAM_ID=1 FPS=29.72
+2025-07-26 18:40:28,678 - INFO - Frame 103: 1 objek terdeteksi
+2025-07-26 18:40:28,679 - INFO - ID 1_1753530008: Durasi deteksi = 19.96 detik, Total Duration = 19.96 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:28,681 - INFO - INFO: CAM_ID=1 FPS=30.11
+2025-07-26 18:40:28,810 - INFO - Frame 104: 1 objek terdeteksi
+2025-07-26 18:40:28,816 - INFO - ID 1_1753530008: Durasi deteksi = 20.09 detik, Total Duration = 20.09 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:28,817 - INFO - INFO: CAM_ID=1 FPS=29.98
+2025-07-26 18:40:28,913 - INFO - Frame 105: 1 objek terdeteksi
+2025-07-26 18:40:28,914 - INFO - ID 1_1753530008: Durasi deteksi = 20.19 detik, Total Duration = 20.19 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:28,915 - INFO - INFO: CAM_ID=1 FPS=29.16
+2025-07-26 18:40:29,046 - INFO - Frame 106: 1 objek terdeteksi
+2025-07-26 18:40:29,047 - INFO - ID 1_1753530008: Durasi deteksi = 20.32 detik, Total Duration = 20.32 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:29,049 - INFO - INFO: CAM_ID=1 FPS=22.25
+2025-07-26 18:40:29,166 - INFO - Frame 107: 1 objek terdeteksi
+2025-07-26 18:40:29,167 - INFO - ID 1_1753530008: Durasi deteksi = 20.44 detik, Total Duration = 20.44 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:29,169 - INFO - INFO: CAM_ID=1 FPS=23.60
+2025-07-26 18:40:29,282 - INFO - Frame 108: 1 objek terdeteksi
+2025-07-26 18:40:29,283 - INFO - ID 1_1753530008: Durasi deteksi = 20.56 detik, Total Duration = 20.56 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:29,285 - INFO - INFO: CAM_ID=1 FPS=28.66
+2025-07-26 18:40:29,384 - INFO - Frame 109: 1 objek terdeteksi
+2025-07-26 18:40:29,385 - INFO - ID 1_1753530008: Durasi deteksi = 20.66 detik, Total Duration = 20.66 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:29,386 - INFO - INFO: CAM_ID=1 FPS=30.62
+2025-07-26 18:40:29,520 - INFO - Frame 110: 1 objek terdeteksi
+2025-07-26 18:40:29,522 - INFO - ID 1_1753530008: Durasi deteksi = 20.80 detik, Total Duration = 20.80 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:29,523 - INFO - INFO: CAM_ID=1 FPS=26.75
+2025-07-26 18:40:29,658 - INFO - Frame 111: 1 objek terdeteksi
+2025-07-26 18:40:29,660 - INFO - ID 1_1753530008: Durasi deteksi = 20.94 detik, Total Duration = 20.94 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:29,661 - INFO - INFO: CAM_ID=1 FPS=21.78
+2025-07-26 18:40:29,777 - INFO - Frame 112: 1 objek terdeteksi
+2025-07-26 18:40:29,779 - INFO - ID 1_1753530008: Durasi deteksi = 21.05 detik, Total Duration = 21.05 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:29,780 - INFO - INFO: CAM_ID=1 FPS=29.43
+2025-07-26 18:40:29,908 - INFO - Frame 113: 1 objek terdeteksi
+2025-07-26 18:40:29,909 - INFO - ID 1_1753530008: Durasi deteksi = 21.19 detik, Total Duration = 21.19 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:29,911 - INFO - INFO: CAM_ID=1 FPS=29.38
+2025-07-26 18:40:30,006 - INFO - Frame 114: 1 objek terdeteksi
+2025-07-26 18:40:30,007 - INFO - ID 1_1753530008: Durasi deteksi = 21.28 detik, Total Duration = 21.28 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:30,009 - INFO - INFO: CAM_ID=1 FPS=30.97
+2025-07-26 18:40:30,180 - INFO - Frame 115: 1 objek terdeteksi
+2025-07-26 18:40:30,181 - INFO - ID 1_1753530008: Durasi deteksi = 21.46 detik, Total Duration = 21.46 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:30,182 - INFO - INFO: CAM_ID=1 FPS=30.42
+2025-07-26 18:40:30,275 - INFO - Frame 116: 1 objek terdeteksi
+2025-07-26 18:40:30,277 - INFO - ID 1_1753530008: Durasi deteksi = 21.55 detik, Total Duration = 21.55 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:30,278 - INFO - INFO: CAM_ID=1 FPS=30.65
+2025-07-26 18:40:30,399 - INFO - Frame 117: 1 objek terdeteksi
+2025-07-26 18:40:30,401 - INFO - ID 1_1753530008: Durasi deteksi = 21.68 detik, Total Duration = 21.68 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:30,402 - INFO - INFO: CAM_ID=1 FPS=31.01
+2025-07-26 18:40:30,621 - INFO - Frame 118: 1 objek terdeteksi
+2025-07-26 18:40:30,622 - INFO - ID 1_1753530008: Durasi deteksi = 21.90 detik, Total Duration = 21.90 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:30,624 - INFO - INFO: CAM_ID=1 FPS=15.53
+2025-07-26 18:40:30,750 - INFO - Frame 119: 1 objek terdeteksi
+2025-07-26 18:40:30,751 - INFO - ID 1_1753530008: Durasi deteksi = 22.03 detik, Total Duration = 22.03 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:30,753 - INFO - INFO: CAM_ID=1 FPS=28.65
+2025-07-26 18:40:30,854 - INFO - Frame 120: 1 objek terdeteksi
+2025-07-26 18:40:30,868 - INFO - ID 1_1753530008: Durasi deteksi = 22.14 detik, Total Duration = 22.14 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:30,870 - INFO - INFO: CAM_ID=1 FPS=28.77
+2025-07-26 18:40:31,011 - INFO - Frame 121: 1 objek terdeteksi
+2025-07-26 18:40:31,012 - INFO - ID 1_1753530008: Durasi deteksi = 22.29 detik, Total Duration = 22.29 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:31,014 - INFO - INFO: CAM_ID=1 FPS=26.34
+2025-07-26 18:40:31,111 - INFO - Frame 122: 1 objek terdeteksi
+2025-07-26 18:40:31,112 - INFO - ID 1_1753530008: Durasi deteksi = 22.39 detik, Total Duration = 22.39 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:31,114 - INFO - INFO: CAM_ID=1 FPS=29.38
+2025-07-26 18:40:31,229 - INFO - Frame 123: 1 objek terdeteksi
+2025-07-26 18:40:31,230 - INFO - ID 1_1753530008: Durasi deteksi = 22.51 detik, Total Duration = 22.51 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:31,231 - INFO - INFO: CAM_ID=1 FPS=28.37
+2025-07-26 18:40:31,347 - INFO - Frame 124: 1 objek terdeteksi
+2025-07-26 18:40:31,348 - INFO - ID 1_1753530008: Durasi deteksi = 22.62 detik, Total Duration = 22.62 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:31,350 - INFO - INFO: CAM_ID=1 FPS=30.44
+2025-07-26 18:40:31,462 - INFO - Frame 125: 1 objek terdeteksi
+2025-07-26 18:40:31,465 - INFO - ID 1_1753530008: Durasi deteksi = 22.74 detik, Total Duration = 22.74 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:31,466 - INFO - INFO: CAM_ID=1 FPS=28.09
+2025-07-26 18:40:31,599 - INFO - Frame 126: 1 objek terdeteksi
+2025-07-26 18:40:31,607 - INFO - ID 1_1753530008: Durasi deteksi = 22.88 detik, Total Duration = 22.88 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:31,617 - INFO - INFO: CAM_ID=1 FPS=29.42
+2025-07-26 18:40:31,721 - INFO - Frame 127: 1 objek terdeteksi
+2025-07-26 18:40:31,722 - INFO - ID 1_1753530008: Durasi deteksi = 23.00 detik, Total Duration = 23.00 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:31,724 - INFO - INFO: CAM_ID=1 FPS=28.60
+2025-07-26 18:40:31,828 - INFO - Frame 128: 1 objek terdeteksi
+2025-07-26 18:40:31,829 - INFO - ID 1_1753530008: Durasi deteksi = 23.10 detik, Total Duration = 23.10 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:31,830 - INFO - INFO: CAM_ID=1 FPS=30.46
+2025-07-26 18:40:31,944 - INFO - Frame 129: 1 objek terdeteksi
+2025-07-26 18:40:31,946 - INFO - ID 1_1753530008: Durasi deteksi = 23.22 detik, Total Duration = 23.22 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:31,947 - INFO - INFO: CAM_ID=1 FPS=30.04
+2025-07-26 18:40:32,040 - INFO - Frame 130: 1 objek terdeteksi
+2025-07-26 18:40:32,042 - INFO - ID 1_1753530008: Durasi deteksi = 23.32 detik, Total Duration = 23.32 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:32,043 - INFO - INFO: CAM_ID=1 FPS=30.37
+2025-07-26 18:40:32,139 - INFO - Frame 131: 1 objek terdeteksi
+2025-07-26 18:40:32,145 - INFO - ID 1_1753530008: Durasi deteksi = 23.42 detik, Total Duration = 23.42 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:32,147 - INFO - INFO: CAM_ID=1 FPS=29.05
+2025-07-26 18:40:32,257 - INFO - Frame 132: 1 objek terdeteksi
+2025-07-26 18:40:32,258 - INFO - ID 1_1753530008: Durasi deteksi = 23.53 detik, Total Duration = 23.53 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:32,260 - INFO - INFO: CAM_ID=1 FPS=30.69
+2025-07-26 18:40:32,390 - INFO - Frame 133: 1 objek terdeteksi
+2025-07-26 18:40:32,391 - INFO - ID 1_1753530008: Durasi deteksi = 23.67 detik, Total Duration = 23.67 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:32,392 - INFO - INFO: CAM_ID=1 FPS=30.78
+2025-07-26 18:40:32,557 - INFO - Frame 134: 1 objek terdeteksi
+2025-07-26 18:40:32,559 - INFO - ID 1_1753530008: Durasi deteksi = 23.83 detik, Total Duration = 23.83 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:32,560 - INFO - INFO: CAM_ID=1 FPS=30.04
+2025-07-26 18:40:32,719 - INFO - Frame 135: 1 objek terdeteksi
+2025-07-26 18:40:32,721 - INFO - ID 1_1753530008: Durasi deteksi = 24.00 detik, Total Duration = 24.00 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:32,722 - INFO - INFO: CAM_ID=1 FPS=14.98
+2025-07-26 18:40:32,885 - INFO - Frame 136: 1 objek terdeteksi
+2025-07-26 18:40:32,886 - INFO - ID 1_1753530008: Durasi deteksi = 24.16 detik, Total Duration = 24.16 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:32,887 - INFO - INFO: CAM_ID=1 FPS=25.15
+2025-07-26 18:40:33,040 - INFO - Frame 137: 1 objek terdeteksi
+2025-07-26 18:40:33,042 - INFO - ID 1_1753530008: Durasi deteksi = 24.32 detik, Total Duration = 24.32 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:33,043 - INFO - INFO: CAM_ID=1 FPS=17.56
+2025-07-26 18:40:33,152 - INFO - Frame 138: 1 objek terdeteksi
+2025-07-26 18:40:33,153 - INFO - ID 1_1753530008: Durasi deteksi = 24.43 detik, Total Duration = 24.43 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:33,154 - INFO - INFO: CAM_ID=1 FPS=28.79
+2025-07-26 18:40:33,278 - INFO - Frame 139: 1 objek terdeteksi
+2025-07-26 18:40:33,279 - INFO - ID 1_1753530008: Durasi deteksi = 24.56 detik, Total Duration = 24.56 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:33,281 - INFO - INFO: CAM_ID=1 FPS=29.24
+2025-07-26 18:40:33,409 - INFO - Frame 140: 1 objek terdeteksi
+2025-07-26 18:40:33,410 - INFO - ID 1_1753530008: Durasi deteksi = 24.69 detik, Total Duration = 24.69 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:33,411 - INFO - INFO: CAM_ID=1 FPS=29.13
+2025-07-26 18:40:33,531 - INFO - Frame 141: 1 objek terdeteksi
+2025-07-26 18:40:33,542 - INFO - ID 1_1753530008: Durasi deteksi = 24.82 detik, Total Duration = 24.82 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:33,543 - INFO - INFO: CAM_ID=1 FPS=25.13
+2025-07-26 18:40:33,683 - INFO - Frame 142: 1 objek terdeteksi
+2025-07-26 18:40:33,685 - INFO - ID 1_1753530008: Durasi deteksi = 24.96 detik, Total Duration = 24.96 detik, Notified First = True, Notified Second = False
+2025-07-26 18:40:33,686 - INFO - INFO: CAM_ID=1 FPS=24.28
+2025-07-26 18:40:33,843 - INFO - Program berhenti, ID 1_1753530008 Total Duration: 24.96 detik

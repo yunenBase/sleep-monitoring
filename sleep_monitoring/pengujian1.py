@@ -52,8 +52,9 @@ camera_id = 1  # Identitas kamera
 while True:
     ret, frame = cap.read()  # 'frame' adalah gambar asli
     if not ret:
-        print("Gagal mengambil frame dari video")
-        break
+        print("Video selesai, mengulang dari awal (looping)...")
+        cap.set(cv2.CAP_PROP_POS_FRAMES, 'videos/camlamakiri.mp4')
+        continue
 
     frame_count += 1
     frame_resized = cv2.resize(frame, (640, 360))  # Frame resized untuk inferensi
@@ -157,7 +158,7 @@ while True:
                     detection_time_wib = datetime.fromtimestamp(tracked_objects[obj_id]['detection_time'], tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
                     send_time_wib = datetime.fromtimestamp(timestamp, tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
                     caption = f"Ada yang ketiduran nih | Deteksi Awal: {detection_start_time_wib}, Deteksi: {detection_time_wib}, Pengiriman: {send_time_wib}, Duration: {tracked_objects[obj_id]['total_duration']:.2f} seconds"
-                    send_to_telegram(image_url, caption, tracked_objects[obj_id]['total_duration'])
+                    send_to_telegram_new(image_url, caption, tracked_objects[obj_id]['total_duration'])
                     tracked_objects[obj_id]['notified_first'] = True
                     tracked_objects[obj_id]['last_notification_time'] = timestamp
                     delay = (timestamp - tracked_objects[obj_id]['detection_time']) * 1000  # Konversi ke milidetik
@@ -217,7 +218,7 @@ while True:
                     detection_time_wib = datetime.fromtimestamp(tracked_objects[obj_id]['detection_time'], tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
                     send_time_wib = datetime.fromtimestamp(timestamp, tz=tz_indonesia).strftime('%d-%m-%Y %H:%M:%S WIB')
                     caption = f"Terpantau masih tidur ya | Deteksi Awal: {detection_start_time_wib}, Deteksi: {detection_time_wib}, Pengiriman: {send_time_wib}, Duration: {tracked_objects[obj_id]['total_duration']:.2f} seconds"
-                    send_to_telegram_new(image_url, caption, tracked_objects[obj_id]['total_duration'])
+                    send_to_telegram(image_url, caption, tracked_objects[obj_id]['total_duration'])
                     tracked_objects[obj_id]['notified_second'] = True
                     tracked_objects[obj_id]['last_notification_time'] = timestamp
                     delay = (timestamp - tracked_objects[obj_id]['detection_time']) * 1000  # Konversi ke milidetik

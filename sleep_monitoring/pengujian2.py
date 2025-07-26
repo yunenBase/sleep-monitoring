@@ -26,7 +26,7 @@ model = YoloTRT(
 
 # Inisialisasi video capture
 # cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
-cap = cv2.VideoCapture('videos/camlamakiri.mp4')
+cap = cv2.VideoCapture('videos/camlamakanan.mp4')
 if not cap.isOpened():
     print("Error: Tidak dapat membuka video tes-vid.mp4")
     sys.exit()
@@ -46,14 +46,15 @@ capture_count = 0  # Variabel untuk penamaan file gambar
 tracked_objects = {}  # {id: {'start_time': float, 'total_duration': float, 'last_notification_time': float, 'notified_first': bool, 'notified_second': bool, 'detection_time': float}}
 tracked_boxes = {}    # {id: {'centroid': tuple, 'box': list, 'class': str, 'conf': float}}
 next_id = 0
-camera_id = 1  # Identitas kamera
+camera_id = 2  # Identitas kamera
 
 # Main loop
 while True:
     ret, frame = cap.read()  # 'frame' adalah gambar asli
     if not ret:
-        print("Gagal mengambil frame dari video")
-        break
+        print("Video selesai, mengulang dari awal (looping)...")
+        cap.set(cv2.CAP_PROP_POS_FRAMES, 'videos/camlamakanan.mp4')
+        continue
 
     frame_count += 1
     frame_resized = cv2.resize(frame, (640, 360))  # Frame resized untuk inferensi
